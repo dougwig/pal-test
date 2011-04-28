@@ -1,5 +1,3 @@
-require "CSV"
-
 class SignupsController < ApplicationController
   before_filter :require_magic_key, :except => [ :show, :new, :create ]
   before_filter :require_magic_key_or_auth_token, :only => [ :show ]
